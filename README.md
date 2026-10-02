@@ -61,7 +61,7 @@ O `code.py` importa o texto de um arquivo chamado **`content.py`**:
 from content import CODE_CHUNKS
 ```
 
-Crie esse arquivo na raiz do `CIRCUITPY`, com exatamente esse nome e uma lista chamada **`CODE_CHUNKS`**. **Insira o código da sua escolha dentro dos blocos** — é esse texto que o Pico vai digitar. Cada item da lista é um bloco. Entre um bloco e outro, o Pico faz uma pausa e às vezes mexe o mouse ou rola a tela.
+Crie esse arquivo na raiz do `CIRCUITPY`, com exatamente esse nome e uma lista chamada **`CODE_CHUNKS`**. **Insira o código da sua escolha dentro dos blocos** = é esse texto que o Pico vai digitar. Cada item da lista é um bloco. Entre um bloco e outro, o Pico faz uma pausa e às vezes mexe o mouse ou rola a tela.
 
 O arquivo já vem com a lista vazia. **Cole o código da sua escolha entre os blocos `'''`**, assim:
 

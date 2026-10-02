@@ -53,7 +53,37 @@ Os parâmetros ficam no topo do `code.py`:
 | `SCROLL_SESSION_PROB` | `0.15` | Chance de rolar a tela antes de um bloco |
 | `MOUSE_AFTER_CHUNK_PROB` | `0.4` | Chance de mexer o mouse após um bloco |
 
-Para mudar o que é digitado, edite a lista `CODE_CHUNKS` em `content.py`.
+## 📝 Texto a ser digitado (`content.py`)
+
+O `code.py` importa o texto de um arquivo chamado **`content.py`**:
+
+```python
+from content import CODE_CHUNKS
+```
+
+Crie esse arquivo na raiz do `CIRCUITPY`, com exatamente esse nome e uma lista chamada **`CODE_CHUNKS`**. **Insira o código da sua escolha dentro dos blocos** — é esse texto que o Pico vai digitar. Cada item da lista é um bloco. Entre um bloco e outro, o Pico faz uma pausa e às vezes mexe o mouse ou rola a tela.
+
+O arquivo já vem com a lista vazia. **Cole o código da sua escolha entre os blocos `'''`**, assim:
+
+```python
+# content.py
+CODE_CHUNKS = [
+'''
+# >>> Cole aqui o primeiro trecho que você quer que seja digitado <<<
+''',
+
+'''
+# >>> Cole aqui o segundo trecho (adicione quantos blocos quiser) <<<
+''',
+]
+```
+
+Dicas:
+- Use `'''` (três aspas simples) para escrever blocos com várias linhas.
+- O texto não precisa ser um código que funcione. Ele só precisa parecer plausível na tela.
+- Prefira caracteres ASCII simples. Acentos e `ç` não existem no layout US: o programa gera um erro e para.
+- Desative o autocompletar e a indentação automática do editor de destino. Senão, a indentação vai se acumular.
+- Se o arquivo não existir, o Pico mostra `ImportError: no module named 'content'` e não digita nada.
 
 ## ⚠️ Layout do teclado
 
